@@ -1,0 +1,118 @@
+#####################################
+Overview
+#####################################
+
+OpenEMS is a free and open source :ref:`EC-FDTD <fdtd>` solver. The development was started in February 2010, and it is written in C++. An extensive Matlab/Octave interface is used to define the FDTD options. The geometry used for the FDTD simulations is handled by the CSXCAD library, which is part of the openEMS project, and also accessible via Matlab/Octave.
+
+
+
+**********************************
+Capabilities
+**********************************
+
+With openEMS you can conduct an electromagnetic field simulation of any 3D model, e.g. waveguides, coax lines, microstrips, striplines, inductors, PCBs with passive components (R, L, C, transmission line), patch antennas, horn antennas, helical antennas, and many more. The 3D model can be described in cartesian or cylindrical coordinates.
+
+The results of the simulation can be extracted in time- or frequency domain (e.g. S-parameters), field dumps allow to observe the field components in a 3D animation (using ParaView), NF2FF allows to observe the far field, ...
+
+
+
+**********************************
+Features
+**********************************
+
+* Efficient EC-FDTD method in full 3D cartesian (x,y,z) coordinates or cylindrical coordinates (ρ, φ, z)
+* Fully graded mesh
+* Multi-threading, SIMD (SSE) and MPI support for high speed parallel FDTD
+* Simple engine extensions API to easily introduce new features to the FDTD algorithm
+* Matlab/Octave-Interface
+* Absorbing boundary conditions (MUR, PML)
+* Coordinate dependent material definitions
+* Coordinate dependent excitation definitions (e.g. mode-profiles)
+* Dispersive materials (Drude/Lorentz/Debye type)
+* Field dumps in time and frequency domain, in .vtk or .hdf5 file format
+* Flexible post-processing routines (mostly in Matlab/Octave)
+* Subgrids to reduce simulation time in cylindrical coordinates
+* Remote simulations using SSH (Linux only)
+
+.. todo:
+	
+	**TODO** add links to articles
+
+
+
+**********************************
+Components
+**********************************
+
+OpenEMS
+	A free and open source EC-FDTD solver
+
+CSXCAD
+	A C++ library to describe geometrical objects and their physical or non-physical properties
+
+AppCSXCAD
+	A visualization program, capable of showing the structure defined inside a CSXCAD .xml-file
+
+QCSXCAD
+	The visualisation library used by AppCSXCAD
+
+Circuit Toolbox
+	Small collection of useful functions to convert *n*-port network parameter, such as scattering parameters, Z- or Y-parameters.
+
+hyp2mat
+	A utility which converts HyperLynx files to matlab for electromagnetic simulation, or to PDF for printing
+
+.. todo:
+	
+	add links to articles
+
+
+
+**********************************
+License
+**********************************
+
+openEMS is licensed under the `GNU General Public License, Version 3 or later <https://www.gnu.org/licenses/gpl.html>`_.
+
+CSXCAD is licensed under the `GNU Lesser General Public License, Version 3 or later <https://www.gnu.org/licenses/lgpl.html>`_.
+
+.. todo::
+	
+	Much better: put a license file into the repo, and link to there!
+
+
+**********************************
+Reference and Publications
+**********************************
+
+We kindly ask you to :ref:`reference <how_to_reference>` openEMS in any :ref:`publication <publications>` that you were using openEMS for.
+
+
+
+**********************************
+Contact and Forum
+**********************************
+
+For questions, problems, bug-reports, support, ideas etc. regarding openEMS:
+
+	* `openEMS Forum <https://www.openems.de/forum/>`_
+	
+	* `contact Thorsten Liebig via e-mail <mailto:thorsten.liebig@uni-due.de>`_
+
+For general questions regarding numerical simulations, electromagnetic problems etc., you may have a look at the Laboratory for General and Theoretical Electrical Engineering (ATE) website:
+	
+	* `English <https://www.ate.uni-due.de/>`_
+
+	* `German <https://www.ate.uni-due.de/index_eng.htm>`_
+
+
+
+
+
+**********************************
+Quick Start
+**********************************
+
+#. :doc:`install<../installation/index>` openEMS
+
+#. walk through the :ref:`tutorials <tutorials>` and :ref:`examples <tutorials_examples>`

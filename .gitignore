@@ -1,7 +1,7 @@
 build/
 release/
 debug/
-doc/
+doc/_build/
 obj/
 nf2ff/nf2ff
 tmp*

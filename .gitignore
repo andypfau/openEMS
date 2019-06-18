@@ -5,7 +5,6 @@ doc/_build/
 obj/
 nf2ff/nf2ff
 tmp*
-Makefile*
 *~
 *.so*
 *.a
